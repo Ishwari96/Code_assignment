@@ -41,7 +41,29 @@ oc expose springboot-sample-app --hostname=www.example.com
 
 Client app will run on port 9000 and Expenses on 9001. We need both the services running for each response.
 
-Once both the services are up and running, you can run curl or postman to get the response or
+Once both the services are up and running, you can run curl or postman to get the response which will accept JSON body
+As mentioned earlier similler paths we can follow for both the sevices
+
+**POST**  http://localhost:9000/client and requestBody JSON for Client Service (Client Id is auto generated) 
+
+{
+"name" : "stefan",
+"emailId": "stefan@kees"
+}
+
+**POST** http://localhost:9001/expense and requestBody JSON for Expense service (Expense Id is auto generated) 
+
+{
+"clientId": 1,
+"amountSpent" : 5000,
+"date": "26/05/2021"
+}
+
+**GET** http://localhost:9000/client/1
+
+**GET** http://localhost:9000/client/1/expenses/total
+
+**GET** http://localhost:9001/expense/client/1
 
 Use swagger to test application using below URL
 ```
