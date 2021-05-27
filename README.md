@@ -4,8 +4,14 @@ Client expenses
 Create a Clients SpringBoot service. It holds client data (id, name).
 Endpoints exposed:
 POST /client → create a user
-GET /client/{id} → show the name of the client
-GET /client/{id}/expenses/total → show a total of all the expenses of the client
+GET /client/{clientId} → show the name of the client
+GET /client/{clientId}/expenses/total → show a total of all the expenses of the client
+
+Create an Expenses SpringBoot service. It holds expenses information for all
+clients (date, amount spent).
+Endpoints exposed:
+POST /expense → create an expense record
+GET /expense/client/{clientId} → return a list of all the expenses for a clien
 
 ## Requirements
 
