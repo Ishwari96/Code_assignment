@@ -1,14 +1,17 @@
 # Code_assignment
 Client expenses
 
-Create a Clients SpringBoot service. It holds client data (id, name).
+We have 2 different springboot applications :
+
+**Client** SpringBoot service which holds client data (id, name).
+
 Endpoints exposed:
 POST /client → create a user
 GET /client/{clientId} → show the name of the client
 GET /client/{clientId}/expenses/total → show a total of all the expenses of the client
 
-Create an Expenses SpringBoot service. It holds expenses information for all
-clients (date, amount spent).
+**Expenses** SpringBoot service which holds expenses information for all clients (date, amount spent).
+
 Endpoints exposed:
 POST /expense → create an expense record
 GET /expense/client/{clientId} → return a list of all the expenses for a clien
@@ -36,12 +39,14 @@ oc expose springboot-sample-app --hostname=www.example.com
 ```
 ## Getting started
 
-Once application is up and running, you can run curl or postman to get the response or
+Client app will run on port 9000 and Expenses on 9001. We need both the services running for each response.
+
+Once both the services are up and running, you can run curl or postman to get the response or
 
 Use swagger to test application using below URL
-
 ```
-http://localhost:9000/swagger-ui.html#/
+http://localhost:9000/swagger-ui.html#/client-controller
+http://localhost:9001/swagger-ui.html#/expense-controller
 ```
 
 ## Copyright
