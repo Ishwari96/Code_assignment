@@ -1,0 +1,6 @@
+com\client\expenses\service\ExpenseService.class
+com\client\expenses\ExpensesApplication.class
+com\client\expenses\model\Expenses.class
+com\client\expenses\repository\ExpensesRepository.class
+com\client\expenses\controller\ExpenseController.class
+com\client\expenses\config\SwaggerConfig.class
