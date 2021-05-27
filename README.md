@@ -35,7 +35,9 @@ Once application is up and running, you can run curl or postman to get the respo
 Use swagger to test application using below URL
 
 ```
-http://localhost:9000/swagger-ui.html#/
+http://localhost:9000/swagger-ui.html#/client-controller
+
+http://localhost:9001/swagger-ui.html#/expense-controller
 ```
 
 ## Copyright
